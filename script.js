@@ -5,13 +5,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle button clicks
     applyButtons.forEach(button => {
         button.addEventListener('click', function(e) {
-            e.preventDefault();
-            const url = this.getAttribute('href');
-            if (url) {
-                window.open(url, '_blank');
-            }
+            // Remove preventDefault to allow normal link navigation
+            const productId = this.getAttribute('data-product');
+            localStorage.setItem('lastClicked', productId);
         });
     });
+    
+    // Check if returning from external link
+    if (document.referrer.includes('pxl.leads.su')) {
+        const lastClicked = localStorage.getItem('lastClicked');
+        if (lastClicked) {
+            // Force refresh the page to ensure proper loading
+            localStorage.removeItem('lastClicked');
+            if (performance && performance.navigation.type !== 1) {
+                window.location.reload(true);
+            }
+        }
+    }
     
     // Product hover animation
     products.forEach(product => {
