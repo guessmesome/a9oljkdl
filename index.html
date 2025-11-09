@@ -11,63 +11,48 @@
 </head>
 <body>
     <div class="container">
-        <h1>Выберите продукт, который вам интересен:</h1>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
         
-        <div class="products">
-            <div class="product" id="product1">
-                <div class="product-content">
-                    <div class="product-image">
-                        <img src="images/Product_1.png" alt="Дебетовая карта">
-                    </div>
-                    <div class="product-info">
-                        <h2>Дебетовая карта</h2>
-                        <p>Кэшбек до 3000₽ в месяц</p>
-                        <a href="https://trnsfx.ru/go/se3anp3tgl" class="apply-btn" data-product="1">Оформить</a>
-                    </div>
+        <h1>Выберите продукт,<br>который вам интересен</h1>
+        
+        <div class="products-grid">
+            <div class="product-wrapper">
+                <div class="product-card">
+                    <img src="images/Product_1.png" alt="Дебетовая карта">
                 </div>
+                <a href="#" class="apply-btn" data-product="1">Оформить</a>
             </div>
             
-            <div class="product" id="product2">
-                <div class="product-content">
-                    <div class="product-image">
-                        <img src="images/Product_2.png" alt="Кредитная карта">
-                    </div>
-                    <div class="product-info">
-                        <h2>Кредитная карта</h2>
-                        <p>Снятие наличных без комиссии</p>
-                        <a href="https://trnsfx.ru/go/s6v1htp7lc" class="apply-btn" data-product="2">Оформить</a>
-                    </div>
+            <div class="product-wrapper">
+                <div class="product-card">
+                    <img src="images/Product_2.png" alt="Кредитная карта">
                 </div>
-            </div>
-            
-            <div class="product" id="product3">
-                <div class="product-content">
-                    <div class="product-image">
-                        <img src="images/Product_3.png" alt="Займ">
-                    </div>
-                    <div class="product-info">
-                        <h2>Займ на карту</h2>
-                        <p>Под выгодный процент</p>
-                        <a href="https://trnsfx.ru/go/ss92mcrphf" class="apply-btn" data-product="3">Оформить</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="product" id="product4">
-                <div class="product-content">
-                    <div class="product-image">
-                        <img src="images/Product_4.png" alt="Кредит наличными">
-                    </div>
-                    <div class="product-info">
-                        <h2>Кредит наличными</h2>
-                        <p>До 90 дней без первого платежа</p>
-                        <a href="https://trnsfx.ru/go/szr83evg5a" class="apply-btn" data-product="4">Оформить</a>
-                    </div>
-                </div>
+                <a href="#" class="apply-btn" data-product="2">Оформить</a>
             </div>
         </div>
     </div>
     
+    <div class="products-container-red">
+        <div class="products-grid-bottom">
+            <div class="product-wrapper-red">
+                <div class="product-card-white">
+                    <img src="images/Product_3.png" alt="Кредит наличными">
+                </div>
+                <a href="#" class="apply-btn-white" data-product="4">Оформить</a>
+            </div>
+            
+            <div class="product-wrapper-red">
+                <div class="product-card-white">
+                    <img src="images/Product_4.png" alt="Займ">
+                </div>
+                <a href="#" class="apply-btn-white" data-product="3">Оформить</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="config.js"></script>
     <script src="script.js"></script>
 </body>
 </html> 
